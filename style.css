@@ -1,0 +1,53 @@
+/* 기본 스타일 및 레이아웃 설정 */
+body {
+    font-family: 'Noto Sans KR', 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: #1a237e;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* 차트를 감싸는 컨테이너 스타일 */
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+/* 추천수 알림창(div) 스타일 */
+#recommendation-alert {
+    display: none; /* 초기에는 숨김 */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 100;
+    pointer-events: none; /* 클릭 이벤트가 차트로 전달되도록 설정 */
+    transition: opacity 0.3s ease;
+    text-align: left;
+    white-space: nowrap;
+}
